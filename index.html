@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password Generator</title>
+	<link rel="stylesheet" href="PasswordGenerator.css">
+</head>
+<body>
+	<div class="main">
+		<div class="child">
+			
+			<input type="number" placeholder="Length" id="length" value="10">
+			<div>
+				<div class="btn onMode" id="digitsSwitch">
+					<div class="switch" onclick="digitSwitch(this,'digitsSwitch','digits')">ON</div>
+				</div>
+				<br>
+				Digits <input type="checkbox" id="digits" hidden checked>
+			</div>
+
+			<div>
+				<div class="btn onMode" id="specialCharSwitch">
+					<div class="switch" onclick="digitSwitch(this,'specialCharSwitch','specialChar')">ON</div>
+				</div>
+				<br>
+				Special Characters <input type="checkbox" id="specialChar" hidden checked>
+			</div>
+
+			<div>
+				<div class="btn onMode" id="upperCaseSwitch">
+					<div class="switch" onclick="digitSwitch(this,'upperCaseSwitch','upperCase')">ON</div>
+				</div>
+				<br>
+				Upper Case letters <input type="checkbox" id="upperCase" hidden checked>
+			</div>
+
+			<div>
+				<div class="btn onMode" id="lowerCaseSwitch">
+					<div class="switch" onclick="digitSwitch(this,'lowerCaseSwitch','lowerCase')">ON</div>
+				</div>
+				<br>
+				Lower Case letters <input type="checkbox" id="lowerCase" hidden checked>
+			</div>
+
+		</div>
+		<div class="child">
+			<button onclick="generatePassword()">Generate</button>
+		</div>
+
+		<div class="child">
+			<h1 id="password"></h1>
+		</div>
+		<div class="child">
+			<button onclick="copyPassword()">copy</button>
+		</div>
+	</div>
+
+	<script src="PasswordGenerator.js"></script>
+</body>
+</html>
